@@ -1,0 +1,123 @@
+\documentclass{report}
+\include{preamble}
+
+\title{\LectureTitle: Problem Set 2}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{Exercise 1}
+
+\subsection{a}
+
+Table 1 presents the means and standard deviations for MVP and Tangent portfolios. The upper part of the curve in figure 1 is the efficient frontier of these 10 industries and 10 industries' returns. The frontier is a parabola because the frontier function is a quadratic function as following as a,b,c are constants and c is not equal to 0. Actually we think it is a hyperbola. 
+\[ \sigma_{p}^{2} = \frac{a - 2 b r_{p} + c r_{p}^{2}}{ ac - b^{2}} .\]
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Portfolio&mean return (\%) &standard deviation (\%)\\
+\hline
+MVP& $0.9204$ & $3.7286$ \\
+\hline
+Tangent& $1.0320$ & $4.0395$ \\
+\hline
+\end{tabular}
+\caption{ Monthly Returns of Constructed Portfolios}
+\end{table}
+
+\begin{figure}[H]
+        \centering 
+         \includegraphics[width=0.7\textwidth]{figures//1a}
+         \caption{ Efficient Frontier}
+\end{figure}
+
+\subsection{b}
+Table 2 persents the ratios of mean returns to standard errors of mean returns for each industry, defined as following.
+\[ Ratio = \frac{ \bar{X}_{n}}{ \sigma /\sqrt{n}} .\]
+From these ratios we notice that relability of estimates are high for non-durable manufacturing industry, telecom industry and health industry. Table 3 shows the Tangent portfolio before and after increasing the mean return estimates by a one standard deviation. The mean return of Tangent portfolio changes $ -0.5 \% $ and standard deviation of Tangent portfolio changes $ -0.2\% $.  The upper part of the curve in figure 2 shows the before and after efficient frontiers. The frontier does not change a lot.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+&NoDur & Durbl & Manuf & Enrgy & HiTec & Telcm & Shops & Hlth & Utils & Other\\
+\hline
+Ratio& $6.9869$ & $4.6317$ & $5.3533$ & $5.5384$ & $4.9393$ & $6.1702$ & $5.6837$ & $6.3594$ & $5.2168$ & $4.6469$ \\
+\hline
+\end{tabular}
+\caption{ Reliability of mean return estimates for 10 industry}
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Portfolio&mean return (\%) &standard deviation (\%)\\
+\hline
+Tangent(before)& $1.0320$ & $4.0395$ \\
+\hline
+Tangent(after)& $1.0268$ & $4.0309$ \\
+\hline
+Change & $-0.0052$ & $-0.0086$ \\
+\hline
+\end{tabular}
+\caption{ Two Tangent Portfolios for different return estimates}
+\end{table}
+\begin{figure}[H]
+        \centering 
+         \includegraphics[width=0.7\textwidth]{figures//1b}
+         \caption{ Efficient Frontiers}
+\end{figure}
+
+\subsection{c}
+The upper part of curves in figure 3 shows three efficient frontiers for different covariances. The blue curve is the oringinal frontier, the red curve is the efficient frontier using diagonal matrix of variances as the covariance matrix and the black curve is the efficient frontier using identity matrix as covariance matrix. Relative to question b, the frontier changes a lot. Covariance terms are as much important as variance terms. If there are zero correlation between portfolios, we can achieve a return with much less volatility and the curve bend much more backward as the red curve shows. Also, if the variances of each portfolios are reduced, we can achieve a return with less volatility and the curve will shift to the left as the black curve shows.
+\begin{figure}[H]
+        \centering 
+         \includegraphics[width=0.7\textwidth]{figures//1c}
+         \caption{ Efficient Frontiers}
+\end{figure}
+
+
+\subsection{d}
+Figure 4 shows the original and normal distribution simulated MVP portfolios and Figure 5 shows the oringinal and normal distribution simulated Tangent portfolios. From plots, we can see that the spots of MVP portfolios are more concentrated than spots of Tangency portfolios since the standard deviations of MVP portfolios are between $3.725\%$ and $3.775\%$ while range of standard deviations of Tangency portfolios are nearly $4\%$, thus we can conclude that MVP portfolio is estimated with less error. It may because we only used simulated covariance matrix when constructing MVP portfolio and covariances are better estimated than returns.
+\begin{figure}[H]
+        \centering 
+         \includegraphics[width=0.7\textwidth]{figures//1d1}
+         \caption{ Normal distribution simulated MVP portfolios}
+\end{figure}
+\begin{figure}[H]
+        \centering 
+         \includegraphics[width=0.7\textwidth]{figures//1d2}
+         \caption{ Normal distribution simulated Tangent portfolios}
+\end{figure}
+
+\subsection{e}
+Figure 6 shows the original and bootstrap simulated MVP portfolios and Figure 7 shows the oringinal and bootstrap simulated Tangent portfolios. We think the estimation error under the empirical simulations are larger than under normal distribution simulations in question d since the ranges of standard deviation of MVP and Tangency portfolios are larger than ranges in pervious question. We can even find a Tangency portfolio with a standard deviation more than $10\%$, much more larger than the real standard deviation of real Tangency portfolio.
+\begin{figure}[H]
+        \centering 
+         \includegraphics[width=0.7\textwidth]{figures//1e1}
+         \caption{ Bootstrap simulated MVP portfolios}
+\end{figure}
+\begin{figure}[H]
+        \centering 
+         \includegraphics[width=0.7\textwidth]{figures//1e2}
+         \caption{ Bootstrap simulated Tangent portfolios}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
